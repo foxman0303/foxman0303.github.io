@@ -50,6 +50,22 @@ h1 { font-size: clamp(64px, 9vw, 122px); font-weight: 800; line-height: 1.15; le
 .detail-note { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; font-weight: 400; }
 .interests { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
 .interests li { border: 1px solid var(--line); border-radius: 4px; padding: 7px 12px; font-size: 13px; line-height: 1.5; font-weight: 400; }
+.section-heading h2 { line-height: 1.6; }
+.section-subtitle { display: block; margin-top: 8px; color: var(--muted); font-size: 10px; letter-spacing: .1em; }
+.experience, .qualification-list { min-width: 0; }
+.group-title { margin: 0 0 22px; color: var(--accent); font-size: 12px; font-weight: 400; letter-spacing: .06em; }
+.skill-list { margin: 0 0 40px; }
+.skill-list:last-child { margin-bottom: 0; }
+.skill-item { border-top: 1px solid var(--line); padding: 22px 0; }
+.skill-item dt { font-size: 23px; font-weight: 600; line-height: 1.5; }
+.skill-item dd { margin: 12px 0 0; color: #c5c9bf; font-size: 14px; line-height: 1.9; overflow-wrap: anywhere; }
+.qualification-list { margin: 0; }
+.qualification-row { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 24px; padding: 24px 0; border-top: 1px solid var(--line); }
+.qualification-row:first-child { padding-top: 0; border-top: 0; }
+.qualification-row dt { color: var(--accent); font-family: "Courier New", monospace; font-size: 14px; line-height: 1.9; }
+.qualification-row dd { margin: 0; font-size: 16px; line-height: 1.8; overflow-wrap: anywhere; }
+.qualification-row ul { margin: 0; padding: 0; list-style: none; }
+.qualification-row li + li { margin-top: 12px; }
 .footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding: 25px 0 30px; font-size: 11px; color: var(--muted); }
 .footer > :first-child { font-weight: 700; letter-spacing: .04em; }
 @media (min-width: 1500px) { .hero { padding-top: 100px; padding-bottom: 80px; } }
@@ -67,6 +83,9 @@ h1 { font-size: clamp(64px, 9vw, 122px); font-weight: 800; line-height: 1.15; le
   .detail-row dd { font-size: 21px; }
   .detail-row { grid-template-columns: 100px minmax(0, 1fr); gap: 16px; }
   .detail-row dd.detail-copy { font-size: 17px; }
+  .qualification-row { grid-template-columns: 48px minmax(0, 1fr); gap: 16px; }
+  .qualification-row dd { font-size: 14px; }
+  .skill-item dt { font-size: 21px; }
   .footer { font-size: 10px; }
 }
 @media (max-width: 380px) {
