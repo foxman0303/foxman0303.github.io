@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ブラウザで遊べるテトリス。ブロックを回して積み、横一列をそろえよう。キーボード・タッチ操作に対応。">
+  <meta name="theme-color" content="#151715">
+  <title>テトリス | ことはちゃんの作品</title>
+  <link rel="stylesheet" href="../../style.css?v=4">
+  <link rel="stylesheet" href="./game.css">
+  <script type="module" src="./game.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="page game-page">
+    <header class="header"><a class="wordmark" href="../../" aria-label="ことはちゃん ホーム">KOTOHA<span class="dot" aria-hidden="true">.</span></a><nav class="site-nav" aria-label="メインナビゲーション"><a href="../../">自己紹介</a><a href="../">作品</a></nav></header>
+    <main id="main">
+      <div class="game-heading"><a class="back-link" href="../">← 作品一覧</a><p class="eyebrow">01 / BROWSER GAME</p><h1>テトリス<span class="dot">.</span></h1><p>積んで、そろえて、もう一回。</p></div>
+      <section class="game-layout" aria-label="テトリスゲーム">
+        <div class="play-column">
+          <div class="board-shell">
+            <canvas id="board" width="300" height="600" tabindex="0" aria-label="テトリスの盤面。矢印キーで移動、上矢印で回転、スペースで一気に落下。">このゲームにはCanvasに対応したブラウザが必要です。</canvas>
+            <div class="game-overlay" id="overlay">
+              <p class="overlay-kicker" id="overlay-kicker">READY TO PLAY?</p><h2 id="overlay-title">ラインを、そろえよう。</h2><p id="overlay-description">横一列を埋めるとブロックが消えます。<br>上まで積み上がる前に、ハイスコアを。</p><button type="button" class="primary-button" id="start">ゲームを始める <span aria-hidden="true">→</span></button>
+            </div>
+          </div>
+          <div class="touch-controls" aria-label="ゲーム操作">
+            <button type="button" data-action="left" aria-label="左に移動">←</button><button type="button" data-action="rotate" aria-label="右回転">↻</button><button type="button" data-action="right" aria-label="右に移動">→</button><button type="button" data-action="down" aria-label="下に移動">↓</button><button type="button" data-action="drop" class="drop-button">一気に落下 <span aria-hidden="true">⤓</span></button>
+          </div>
+        </div>
+        <aside class="game-sidebar" aria-label="ゲーム情報">
+          <div class="next-panel"><h2>NEXT</h2><canvas id="next" width="144" height="96" aria-label="次のブロック"></canvas></div>
+          <dl class="stats"><div><dt>SCORE</dt><dd id="score">0</dd></div><div><dt>BEST <span>このブラウザ</span></dt><dd id="best">0</dd></div><div class="small-stat"><dt>LEVEL</dt><dd id="level">1</dd></div><div class="small-stat"><dt>LINES</dt><dd id="lines">0</dd></div></dl>
+          <button type="button" class="secondary-button" id="pause" disabled>一時停止</button>
+          <p class="game-message" id="message" role="status" aria-live="polite">準備できたらスタート。</p>
+        </aside>
+      </section>
+      <section class="instructions" aria-labelledby="controls-title"><div><p class="eyebrow">HOW TO PLAY</p><h2 id="controls-title">操作方法</h2><p>10ライン消すごとにレベルアップ。<br>輪郭のブロックは落下先の目安です。</p></div><dl><div><dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>左右に移動</dd></div><div><dt><kbd>↑</kbd> / <kbd>X</kbd></dt><dd>右回転（Zで左回転）</dd></div><div><dt><kbd>↓</kbd></dt><dd>下に移動</dd></div><div><dt><kbd>Space</kbd></dt><dd>一気に落下</dd></div><div><dt><kbd>P</kbd> / <kbd>Esc</kbd></dt><dd>一時停止・再開</dd></div></dl><p class="touch-note">スマートフォンでは盤面下のボタンで操作できます。左右・下ボタンは長押しにも対応。画面を離れると自動で一時停止します。</p></section>
+      <noscript><p class="noscript">ゲームを遊ぶには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
+    </main>
+    <footer class="footer"><span>KOTOHA<span class="dot" aria-hidden="true">.</span></span><a href="../">作品一覧へ戻る ↗</a></footer>
+  </div>
+</body>
+</html>

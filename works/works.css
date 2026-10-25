@@ -1,0 +1,24 @@
+.works-heading { padding: 70px 0 54px; }
+.works-heading h1 { font-size: clamp(44px, 7vw, 80px); letter-spacing: -.05em; }
+.page-description { color: #c5c9bf; font-size: 15px; line-height: 1.9; margin: 28px 0 0; }
+.work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; padding-bottom: 85px; }
+.work-card { min-width: 0; }
+.work-cover { display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 1.35; padding: 25px; text-decoration: none; border: 1px solid var(--line); background: #1e231a; overflow: hidden; transition: border-color .2s; }
+.work-cover:hover { border-color: var(--accent); }
+.cover-label, .cover-bottom, .work-category { font-family: "Courier New", monospace; font-size: 10px; letter-spacing: .1em; }
+.cover-label { color: var(--muted); }
+.cover-bottom { display: flex; justify-content: space-between; align-items: center; color: var(--accent); }
+.cover-arrow { font-size: 30px; }
+.block-art { display: grid; grid-template-columns: repeat(6, 28px); grid-template-rows: repeat(4, 28px); gap: 4px; margin: 20px auto; transform: rotate(-8deg); }
+.block-art i { background: var(--accent); border: 1px solid #e6ffa2; box-shadow: inset 0 -4px #a9c55b; }
+.block-art i:nth-child(1) { grid-column: 2; }.block-art i:nth-child(2) { grid-column: 3; }.block-art i:nth-child(3) { grid-column: 4; }
+.block-art i:nth-child(4) { grid-column: 3; }.block-art i:nth-child(5) { grid-column: 4; background: #7dd3c7; }.block-art i:nth-child(6) { grid-column: 5; background: #7dd3c7; }
+.block-art i:nth-child(n+7) { background: #677b52; border-color: #899d73; box-shadow: none; }
+.work-info { padding: 22px 0; }
+.work-category { color: var(--muted); margin: 0 0 14px; line-height: 1.6; }
+.work-info h2 { font-size: 26px; margin: 0 0 15px; }
+.work-info h2 a { text-decoration: none; display: flex; justify-content: space-between; }
+.work-info h2 a span { color: var(--accent); }
+.work-info > p:not(.work-category) { color: #c5c9bf; font-size: 14px; line-height: 1.9; margin: 0 0 25px; }
+@media (max-width: 700px) { .works-heading { padding: 50px 0 40px; }.work-grid { grid-template-columns: 1fr; gap: 30px; padding-bottom: 45px; }.block-art { grid-template-columns: repeat(6, 25px); grid-template-rows: repeat(4, 25px); } }
+@media (prefers-reduced-motion: reduce) { .work-cover { transition: none; } }

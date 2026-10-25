@@ -19,6 +19,11 @@ body {
 ::selection { background: var(--accent); color: var(--background); }
 a { color: inherit; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+.site-nav { display: flex; gap: 26px; font-size: 12px; }
+.site-nav a { color: var(--muted); text-decoration: none; padding: 8px 0; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--accent); }
+.works-intro p { margin: 0 0 24px; color: #c5c9bf; font-size: 14px; line-height: 1.9; }
+.text-link { color: var(--accent); font-size: 14px; text-underline-offset: 6px; }
 .skip-link { position: absolute; top: -100px; left: 20px; padding: 12px; background: var(--accent); color: var(--background); z-index: 1; }
 .skip-link:focus { top: 12px; }
 .page { width: min(1120px, calc(100% - 112px)); margin: 0 auto; }
