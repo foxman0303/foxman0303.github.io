@@ -2,6 +2,10 @@
 
 HTML・CSS・JavaScriptで作った、GitHub Pages向けの個人サイトです。
 
+公開サイト：<https://foxman0303.github.io/>
+
+Codex向けのプロジェクト情報・作業指針は、ルートの [AGENTS.md](./AGENTS.md) にまとめています。
+
 ## パソコンで確認する
 
 `index.html` をブラウザで開いてください。インストールやビルドは不要です。
